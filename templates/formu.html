@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Predicción Titanic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Titanic Predicción</h1>
+        <form id="predictForm">
+            <label>Clase:</label>
+            <select name="Pclass">
+                <option value="1">Primera</option>
+                <option value="2">Segunda</option>
+                <option value="3">Tercera</option>
+            </select>
+
+            <label>Sexo:</label>
+            <select name="Sex">
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+            </select>
+
+            <label>Edad:</label>
+            <input type="number" step="any" name="Age" placeholder="Ej: 25.0" />
+
+            <label>SibSp:</label>
+            <input type="number" name="SibSp" />
+
+            <label>Parch:</label>
+            <input type="number" name="Parch" />
+
+            <label>Ticket:</label>
+            <input type="text" name="Ticket" placeholder="Ej: A/5 21171" />
+
+            <label>Fare:</label>
+            <input type="number" step="any" name="Fare" placeholder="Ej: 7.25" />
+
+            <label>Cabina:</label>
+            <input type="text" name="Cabin" placeholder="Ej: Desconocido" />
+
+            <label>Embarque:</label>
+            <select name="Embarked">
+                <option value="S">Southampton</option>
+                <option value="C">Cherbourg</option>
+                <option value="Q">Queenstown</option>
+            </select>
+
+            <button type="submit">Predecir</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</head>

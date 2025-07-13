@@ -1,0 +1,107 @@
+:root {
+  --navy: #0d1b2a;
+  --gold: #c9b037;
+  --offwhite: #f8f9fa;
+  --gray: #495057;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  
+  /* Fondo con imagen gif */
+  background-image: url('https://thevemusic.wordpress.com/wp-content/uploads/2014/02/titanicmotion.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* Para que el contenido se centre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+/* Overlay para oscurecer un poco el fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(13, 27, 42, 0.6); /* color navy semitransparente */
+  z-index: -1;
+}
+
+.form-container {
+  background-color: white;
+  border: 2px solid var(--navy);
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
+}
+
+.form-container h1 {
+  font-size: 22px;
+  text-align: center;
+  color: var(--navy);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+  font-size: 14px;
+  background-color: #f1f3f5;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 5px var(--gold);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--navy);
+  color: var(--gold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #13293d;
+}
+
+#result {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--navy);
+}
